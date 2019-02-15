@@ -2,4 +2,6 @@
     <string name="app_name">Viagens</string>
     <string name="label_especiais">Especiais</string>
     <string name="label_brasil">Brasil</string>
+    <string name="label_cidade">São paulo</string>
+    <string name="label_dias">2 dias</string>
 </resources>
