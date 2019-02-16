@@ -12,17 +12,23 @@ import br.com.viagens.model.Pacote;
 
 public class MainActivity extends AppCompatActivity {
 
-    ListView lvPacotes;
+    public static final int LABEL_PACOTE_VIAGENS = R.string.label_pacote_viagens;
+
+    private ListView lvPacotes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        setTitle(LABEL_PACOTE_VIAGENS);
+
+        initViews();
+    }
+
+    private void initViews() {
         lvPacotes = findViewById(R.id.lv_pacotes);
-
         List<Pacote> pacotes = new PacoteDAO().lista();
-
         lvPacotes.setAdapter(new ListaPacotesAdapter(this, pacotes));
     }
 }

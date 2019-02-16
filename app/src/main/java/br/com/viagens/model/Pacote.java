@@ -9,10 +9,10 @@ public class Pacote {
 
     private String cidade;
     private String imagem;
-    private String dias;
+    private int dias;
     private BigDecimal preco;
 
-    public Pacote(String são_paulo, String sao_paulo_sp, int i, BigDecimal preco) {
+    public Pacote(String cidade, String imagem, int dias, BigDecimal preco) {
         this.cidade = cidade;
         this.imagem = imagem;
         this.dias = dias;
@@ -35,11 +35,11 @@ public class Pacote {
         this.imagem = imagem;
     }
 
-    public String getDias() {
+    public int getDias() {
         return dias;
     }
 
-    public void setDias(String dias) {
+    public void setDias(int dias) {
         this.dias = dias;
     }
 

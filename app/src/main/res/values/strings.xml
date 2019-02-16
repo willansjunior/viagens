@@ -4,4 +4,7 @@
     <string name="label_brasil">Brasil</string>
     <string name="label_cidade">São paulo</string>
     <string name="label_dias">2 dias</string>
+    <string name="label_pacote_viagens">Pacotes de Viagens</string>
+    <string name="label_inf_dias">dias</string>
+    <string name="label_inf_dia">dia</string>
 </resources>
