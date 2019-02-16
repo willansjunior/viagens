@@ -7,4 +7,5 @@
     <string name="label_pacote_viagens">Pacotes de Viagens</string>
     <string name="label_inf_dias">dias</string>
     <string name="label_inf_dia">dia</string>
+    <string name="info_banner_de_topo">Banner de Topo</string>
 </resources>
