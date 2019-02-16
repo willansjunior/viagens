@@ -1,7 +1,10 @@
 package br.com.viagens;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.List;
@@ -30,5 +33,16 @@ public class MainActivity extends AppCompatActivity {
         lvPacotes = findViewById(R.id.lv_pacotes);
         List<Pacote> pacotes = new PacoteDAO().lista();
         lvPacotes.setAdapter(new ListaPacotesAdapter(this, pacotes));
+
+        lvPacotes.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Pacote pacote = (Pacote) adapterView.getItemAtPosition(i);
+
+                Intent intent = new Intent(MainActivity.this, DetalhePacoteActivity.class);
+                intent.putExtra("pacote", pacote);
+                startActivity(intent);
+            }
+        });
     }
 }

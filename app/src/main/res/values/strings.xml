@@ -5,7 +5,11 @@
     <string name="label_cidade">São paulo</string>
     <string name="label_dias">2 dias</string>
     <string name="label_pacote_viagens">Pacotes de Viagens</string>
-    <string name="label_inf_dias">dias</string>
-    <string name="label_inf_dia">dia</string>
+    <string name="label_inf_dias"> dias</string>
+    <string name="label_inf_dia"> dia</string>
     <string name="info_banner_de_topo">Banner de Topo</string>
+    <string name="label_data_periodo">08/12 - 10/12 de 2019</string>
+    <string name="preco">R$ 243,99</string>
+    <string name="label_preco">Preço</string>
+    <string name="button_finalizar_pagamento">Finalizar Pagamento</string>
 </resources>

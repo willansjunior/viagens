@@ -1,11 +1,12 @@
 package br.com.viagens.model;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
  * Created by willans on 15/02/19.
  */
-public class Pacote {
+public class Pacote implements Serializable {
 
     private String cidade;
     private String imagem;
