@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Locale;
 
 import br.com.viagens.model.Pacote;
@@ -61,11 +63,20 @@ public class DetalhePacoteActivity extends AppCompatActivity {
             } else {
                 dias.setText(pacote.getDias() + getString(Constantes.LABEL_INF_DIA));
             }
-            NumberFormat format = DecimalFormat.getCurrencyInstance(new Locale("pt", "BR"));
+            NumberFormat format = DecimalFormat.getCurrencyInstance(new Locale(
+                    getResources().getConfiguration().locale.getLanguage(),
+                    getResources().getConfiguration().locale.getCountry()));
             preco.setText(format.format(pacote.getPreco()).replace("R$", "R$ "));
 
             banner.setImageDrawable(getResources().getDrawable(getResources()
                     .getIdentifier(pacote.getImagem(), Constantes.DRAWABLE, getPackageName())));
         }
+
+        Calendar calendar = Calendar.getInstance();
+        Calendar volta = Calendar.getInstance();
+        volta.add(Calendar.DATE, pacote.getDias());
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM");
+        periodo.setText(format.format(calendar.getTime()) + " " + format.format(volta.getTime()) +
+                " de " + volta.get(Calendar.YEAR));
     }
 }

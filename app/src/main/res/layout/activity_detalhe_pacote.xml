@@ -10,64 +10,66 @@
         android:id="@+id/img_detalhe_pacote"
         android:layout_width="0dp"
         android:layout_height="140dp"
+        android:contentDescription="@string/info_banner_de_topo"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/sao_paulo_sp"
-        android:contentDescription="@string/info_banner_de_topo"/>
+        tools:srcCompat="@drawable/sao_paulo_sp" />
 
     <TextView
         android:id="@+id/txt_detalhe_cidade"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        tools:text="@string/label_cidade"
-        android:textStyle="bold"
-        android:textSize="24sp"
         android:layout_margin="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_detalhe_pacote" />
+        app:layout_constraintTop_toBottomOf="@+id/img_detalhe_pacote"
+        tools:text="@string/label_cidade" />
 
     <TextView
         android:id="@+id/txt_detalhe_dias"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        tools:text="@string/label_dias"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/txt_detalhe_cidade"
-        app:layout_constraintTop_toBottomOf="@+id/txt_detalhe_cidade" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhe_cidade"
+        tools:text="@string/label_dias" />
 
     <TextView
         android:id="@+id/txt_detalhe_periodo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        tools:text="@string/label_data_periodo"
         android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/txt_detalhe_preco"
         app:layout_constraintStart_toStartOf="@+id/txt_detalhe_dias"
-        app:layout_constraintTop_toBottomOf="@+id/txt_detalhe_dias" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_detalhe_dias"
+        tools:text="@string/label_data_periodo" />
 
     <TextView
         android:id="@+id/txt_detalhe_preco"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        tools:text="@string/preco"
-        android:textSize="20sp"
+        android:textAlignment="textEnd"
+        android:gravity="end"
         android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/txt_detalhe_periodo"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txt_detalhe_periodo"
+        tools:text="@string/preco" />
 
     <TextView
         android:id="@+id/txt_detalhe_label_preco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:text="@string/label_preco"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_detalhe_preco"
@@ -77,10 +79,7 @@
         android:id="@+id/btn_finalizar_pagamento"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_margin="8dp"
         android:background="@drawable/button_redondo"
         android:text="@string/button_finalizar_pagamento"
         android:textColor="@android:color/white"
