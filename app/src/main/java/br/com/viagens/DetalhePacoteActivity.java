@@ -26,6 +26,8 @@ public class DetalhePacoteActivity extends AppCompatActivity {
     private ImageView banner;
     private Button btnFinalizarCompra;
 
+    private Pacote pacote;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,14 +50,16 @@ public class DetalhePacoteActivity extends AppCompatActivity {
         btnFinalizarCompra.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(DetalhePacoteActivity.this, DetalhePagamentoActivity.class);
+                intent.putExtra(Constantes.PACOTE, pacote);
+                startActivity(intent);
             }
         });
     }
 
     private void montarDetalhe() {
         Intent intent = getIntent();
-        Pacote pacote = (Pacote) intent.getSerializableExtra("pacote");
+        pacote = (Pacote) intent.getSerializableExtra(Constantes.PACOTE);
         if (pacote != null) {
             cidade.setText(pacote.getCidade());
             if (pacote.getDias() > 1) {

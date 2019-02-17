@@ -12,6 +12,7 @@ import java.util.List;
 import br.com.viagens.adapter.ListaPacotesAdapter;
 import br.com.viagens.dao.PacoteDAO;
 import br.com.viagens.model.Pacote;
+import br.com.viagens.util.Constantes;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 Pacote pacote = (Pacote) adapterView.getItemAtPosition(i);
 
                 Intent intent = new Intent(MainActivity.this, DetalhePacoteActivity.class);
-                intent.putExtra("pacote", pacote);
+                intent.putExtra(Constantes.PACOTE, pacote);
                 startActivity(intent);
             }
         });

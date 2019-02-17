@@ -11,9 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DetalhePacoteActivity"
+        <activity android:name=".DetalhePagamentoActivity"
+            android:parentActivityName=".DetalhePacoteActivity"
+            android:label="@string/label_pagamento"/>
+        <activity
+            android:name=".DetalhePacoteActivity"
             android:label="Detalhe do Pacote"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

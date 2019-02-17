@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetalhePagamentoActivity">
+
+    <TextView
+        android:id="@+id/txt_info_pagamento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:text="@string/info_detalhe_pagamento" />
+
+    <TextView
+        android:id="@+id/txt_label_valor_compra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/label_valor_da_compra"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_info_pagamento" />
+
+    <TextView
+        android:id="@+id/txt_pagamento_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        tools:text="R$ 421,50"
+        android:textSize="24sp"
+        android:textColor="@android:color/holo_green_dark"
+        app:layout_constraintStart_toStartOf="@+id/txt_label_valor_compra"
+        app:layout_constraintTop_toBottomOf="@+id/txt_label_valor_compra" />
+
+    <EditText
+        android:id="@+id/edt_cartao"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="@string/hitn_numero_cartao"
+        android:maxLength="12"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_pagamento_preco"
+        tools:text="Name" />
+
+</android.support.constraint.ConstraintLayout>
