@@ -16,4 +16,9 @@
     <string name="label_valor_da_compra">Valor da compra</string>
     <string name="hitn_numero_cartao">Número do cartão</string>
     <string name="label_pagamento">Pagamento</string>
+    <string name="label_mm">MM</string>
+    <string name="label_aa">AA</string>
+    <string name="label_cvc">CVC</string>
+    <string name="label_hint_nome_cartao">Nome no cartão</string>
+    <string name="btn_finalizar_compra">Finalizar Compra</string>
 </resources>
