@@ -11,9 +11,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".DetalhePagamentoActivity"
-            android:parentActivityName=".DetalhePacoteActivity"
-            android:label="@string/label_pagamento"/>
+        <activity android:name=".ResumoCompraActivity"></activity>
+        <activity
+            android:name=".DetalhePagamentoActivity"
+            android:label="@string/label_pagamento"
+            android:parentActivityName=".DetalhePacoteActivity" />
         <activity
             android:name=".DetalhePacoteActivity"
             android:label="Detalhe do Pacote"
