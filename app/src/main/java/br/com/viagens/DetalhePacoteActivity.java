@@ -59,8 +59,8 @@ public class DetalhePacoteActivity extends AppCompatActivity {
 
     private void montarDetalhe() {
         Intent intent = getIntent();
-        pacote = (Pacote) intent.getSerializableExtra(Constantes.PACOTE);
-        if (pacote != null) {
+        if (intent.hasExtra(Constantes.PACOTE)) {
+            pacote = (Pacote) intent.getSerializableExtra(Constantes.PACOTE);
             cidade.setText(pacote.getCidade());
             if (pacote.getDias() > 1) {
                 dias.setText(pacote.getDias() + getString(Constantes.LABEL_INF_DIAS));

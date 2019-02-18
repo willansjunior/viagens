@@ -45,8 +45,9 @@ public class ResumoCompraActivity extends AppCompatActivity {
 
     private void montarDetalhe() {
         Intent intent = getIntent();
-        pacote = (Pacote) intent.getSerializableExtra(Constantes.PACOTE);
-        if (pacote != null) {
+
+        if (intent.hasExtra(Constantes.PACOTE)) {
+            pacote = (Pacote) intent.getSerializableExtra(Constantes.PACOTE);
             cidade.setText(pacote.getCidade());
 
             banner.setImageDrawable(getResources().getDrawable(getResources()

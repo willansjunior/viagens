@@ -61,8 +61,8 @@ public class DetalhePagamentoActivity extends AppCompatActivity {
 
     private void montarDetalhe() {
         Intent intent = getIntent();
-        pacote = (Pacote) intent.getSerializableExtra(Constantes.PACOTE);
-        if (pacote != null) {
+        if (intent.hasExtra(Constantes.PACOTE)) {
+            pacote = (Pacote) intent.getSerializableExtra(Constantes.PACOTE);
             NumberFormat format = DecimalFormat.getCurrencyInstance(new Locale(
                     getResources().getConfiguration().locale.getLanguage(),
                     getResources().getConfiguration().locale.getCountry()));
