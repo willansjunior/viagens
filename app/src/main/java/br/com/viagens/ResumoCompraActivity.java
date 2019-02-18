@@ -55,7 +55,7 @@ public class ResumoCompraActivity extends AppCompatActivity {
             NumberFormat format = DecimalFormat.getCurrencyInstance(new Locale(
                     getResources().getConfiguration().locale.getLanguage(),
                     getResources().getConfiguration().locale.getCountry()));
-            preco.setText(format.format(pacote.getPreco()).replace("R$", "R$ "));
+            preco.setText(format.format(pacote.getPreco()).replace(Constantes.MOEDA, Constantes.MOEDA_ESPACO));
         }
 
         Calendar calendar = Calendar.getInstance();

@@ -11,5 +11,7 @@ public class Constantes {
     public static final int LABEL_INF_DIAS = R.string.label_inf_dias;
     public static final int LABEL_INF_DIA = R.string.label_inf_dia;
     public static final String PACOTE = "pacote";
+    public static final String MOEDA = "R$";
+    public static final String MOEDA_ESPACO = "R$ ";
 
 }

@@ -68,7 +68,7 @@ public class DetalhePagamentoActivity extends AppCompatActivity {
             NumberFormat format = DecimalFormat.getCurrencyInstance(new Locale(
                     getResources().getConfiguration().locale.getLanguage(),
                     getResources().getConfiguration().locale.getCountry()));
-            txtPreco.setText(format.format(pacote.getPreco()).replace("R$", "R$ "));
+            txtPreco.setText(format.format(pacote.getPreco()).replace(Constantes.MOEDA, Constantes.MOEDA_ESPACO));
         }
     }
 }
