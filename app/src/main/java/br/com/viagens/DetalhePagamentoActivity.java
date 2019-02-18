@@ -10,8 +10,6 @@ import android.widget.TextView;
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Locale;
 
 import br.com.viagens.model.Pacote;
@@ -50,7 +48,7 @@ public class DetalhePagamentoActivity extends AppCompatActivity {
         edtCVCCartao = findViewById(R.id.edt_pagamento_cvc_cartao);
         edtNomeCartao = findViewById(R.id.edt_pagamento_nome_cartao);
 
-        btnPagamento = findViewById(R.id.btn_pagamento_finalizar);
+        btnPagamento = findViewById(R.id.btn_resumo_pagamento_finalizar);
         btnPagamento.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

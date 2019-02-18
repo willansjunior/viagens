@@ -74,13 +74,13 @@ public class DetalhePacoteActivity extends AppCompatActivity {
 
             banner.setImageDrawable(getResources().getDrawable(getResources()
                     .getIdentifier(pacote.getImagem(), Constantes.DRAWABLE, getPackageName())));
-        }
 
-        Calendar calendar = Calendar.getInstance();
-        Calendar volta = Calendar.getInstance();
-        volta.add(Calendar.DATE, pacote.getDias());
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM");
-        periodo.setText(format.format(calendar.getTime()) + " " + format.format(volta.getTime()) +
-                " de " + volta.get(Calendar.YEAR));
+            Calendar calendar = Calendar.getInstance();
+            Calendar volta = Calendar.getInstance();
+            volta.add(Calendar.DATE, pacote.getDias());
+            SimpleDateFormat formatData = new SimpleDateFormat("dd/MM");
+            periodo.setText(formatData.format(calendar.getTime()) + " " + formatData.format(volta.getTime()) +
+                    " de " + volta.get(Calendar.YEAR));
+        }
     }
 }

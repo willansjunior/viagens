@@ -56,13 +56,14 @@ public class ResumoCompraActivity extends AppCompatActivity {
                     getResources().getConfiguration().locale.getLanguage(),
                     getResources().getConfiguration().locale.getCountry()));
             preco.setText(format.format(pacote.getPreco()).replace(Constantes.MOEDA, Constantes.MOEDA_ESPACO));
+
+            Calendar calendar = Calendar.getInstance();
+            Calendar volta = Calendar.getInstance();
+            volta.add(Calendar.DATE, pacote.getDias());
+            SimpleDateFormat formatData = new SimpleDateFormat("dd/MM");
+            periodo.setText(formatData.format(calendar.getTime()) + " " + formatData.format(volta.getTime()) +
+                    " de " + volta.get(Calendar.YEAR));
         }
 
-        Calendar calendar = Calendar.getInstance();
-        Calendar volta = Calendar.getInstance();
-        volta.add(Calendar.DATE, pacote.getDias());
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM");
-        periodo.setText(format.format(calendar.getTime()) + " " + format.format(volta.getTime()) +
-                " de " + volta.get(Calendar.YEAR));
     }
 }

@@ -11,7 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ResumoCompraActivity"></activity>
+        <activity android:name=".ResumoCompraActivity"
+            android:label="Resumo Compra"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".DetalhePagamentoActivity"
             android:label="@string/label_pagamento"
